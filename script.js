@@ -4,14 +4,15 @@
 function checkPassword() {
     var password = document.getElementById("password").value;
    
-    //insert password example
-
+    //insert password example using regular expression
+    
+    
     
     // Your password strength checking logic goes here
     //check using pattern length
-    if (password.length < 5) {
-        result = "Weak";
-    } else if (password.length < 10 ) {
+    if (password.length <= 5) {
+        result = "Weak"; // If password does not match the pattern (i.e., contains characters other than uppercase letters)
+    } else if (password.length <= 10 ) {
         result = "Medium";
     } else {
         result = "Strong";
